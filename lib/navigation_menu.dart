@@ -1,0 +1,58 @@
+
+import 'package:e_commerce/features/store/screens/home/home.dart';
+import 'package:e_commerce/utils/constants/colors.dart';
+import 'package:e_commerce/utils/helpers/app_helpers.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
+
+class NavigationMenu extends StatelessWidget {
+  const NavigationMenu({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    final controller = Get.put(NavigationMenuController());
+    final isDark = AppHelpers.isDarkMode(context);
+    return Scaffold(
+body: Obx(
+  () {
+    return controller.screens[controller.selectedIndex.value];
+  }
+),
+      
+      bottomNavigationBar:Obx(
+
+         () {
+          return NavigationBar(
+            backgroundColor:isDark? UColors.dark: UColors.light,
+            indicatorColor:isDark? UColors.white.withValues(alpha: 0.1):UColors.black.withValues(alpha: 0.1),
+            selectedIndex: controller.selectedIndex.value,
+            onDestinationSelected: (index){
+          
+          controller.selectedIndex.value=index;
+            },
+            
+            destinations: [
+          
+              NavigationDestination(icon: Icon(Iconsax.home), label: 'Home') ,
+              NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store') ,
+              NavigationDestination(icon: Icon(Iconsax.heart), label: 'Wishlist') ,
+              NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile') ,
+           
+          ]);
+        }
+      ) ,
+    );
+  }
+}
+
+
+
+class NavigationMenuController extends GetxController{
+
+RxInt selectedIndex =0.obs;
+
+List<Widget> screens =[HomeScreen(), Container(color: Colors.yellow,),Container(color: Colors.blue,),Container(color: Colors.green,)];
+
+}
