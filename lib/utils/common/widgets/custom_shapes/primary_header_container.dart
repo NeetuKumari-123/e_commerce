@@ -11,17 +11,20 @@ import 'package:flutter/material.dart';
 
 class UPrimaryHeaderContainer extends StatelessWidget {
   const UPrimaryHeaderContainer({
-    super.key, required this.child,
+    super.key, required this.child, required this.height,
   });
 
+
+
 final Widget child;
+final double height;
   @override
   Widget build(BuildContext context) {
     return URoundedEdges(
       child: Container(
       
         color: UColors.primary,
-        height:USizes.homePrimaryHeaderHeight,
+height: height,
         child: Stack(children: [
       /// Circular Container
           Positioned(

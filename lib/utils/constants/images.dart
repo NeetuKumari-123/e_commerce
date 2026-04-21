@@ -40,4 +40,11 @@ class UImages{
  static const String  banner5 = "assets/banners/banner_5.jpg";
  static const String  banner6 = "assets/banners/banner_6.jpg";
 
+
+ /// product
+  static const String  product1 = "assets/products/product1.png";
+
+  /// brand
+  static const String  brand1 = "assets/brands/bata.png";
+
 }
