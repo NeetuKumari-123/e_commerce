@@ -1,9 +1,9 @@
 
-import 'package:e_commerce/features/store/controllers/home/home_controller.dart';
+import 'package:e_commerce/features/shop/controllers/home/home_controller.dart';
 
-import 'package:e_commerce/features/store/screens/widget/home_app_bar.dart';
-import 'package:e_commerce/features/store/screens/widget/home_categories.dart';
-import 'package:e_commerce/features/store/screens/widget/promo_slider.dart';
+import 'package:e_commerce/features/shop/screens/home/widget/home_app_bar.dart';
+import 'package:e_commerce/features/shop/screens/home/widget/home_categories.dart';
+import 'package:e_commerce/features/shop/screens/home/widget/promo_slider.dart';
 
 import 'package:e_commerce/utils/common/widgets/custom_shapes/primary_header_container.dart';
 import 'package:e_commerce/utils/common/widgets/layout/grid_layout.dart';

@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 class USectionHeading extends StatelessWidget {
   const USectionHeading({
     super.key, this.textColor, required this.title,  this.buttonTitle= "View All", this.onPressed,
+   this. showActionButton =true
   });
 
 final Color? textColor;
 final String title, buttonTitle;
 final VoidCallback? onPressed;
+final bool showActionButton;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -18,7 +20,7 @@ final VoidCallback? onPressed;
       children: [
     
      Text(title, style: Theme.of(context).textTheme.headlineSmall!.apply(color: textColor),maxLines: 1,overflow: TextOverflow.ellipsis,),
-     TextButton(onPressed: onPressed, child: Text(buttonTitle))
+    if(showActionButton)  TextButton(onPressed: onPressed, child: Text(buttonTitle))
     ],);
   }
 }

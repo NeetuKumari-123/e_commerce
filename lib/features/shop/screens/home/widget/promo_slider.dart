@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:e_commerce/features/store/controllers/home/home_controller.dart';
-import 'package:e_commerce/features/store/screens/widget/banner_dot_navigation.dart';
+import 'package:e_commerce/features/shop/controllers/home/home_controller.dart';
+import 'package:e_commerce/features/shop/screens/home/widget/banner_dot_navigation.dart';
 import 'package:e_commerce/utils/common/widgets/images/rounded_image.dart';
 
 import 'package:e_commerce/utils/constants/sizes.dart';

@@ -1,8 +1,8 @@
+import 'package:e_commerce/features/shop/screens/product_details/product_details.dart';
 import 'package:e_commerce/utils/common/styles/shadow.dart';
 import 'package:e_commerce/utils/common/widgets/custom_shapes/rounded_container.dart';
 import 'package:e_commerce/utils/common/widgets/icons/circular_icon.dart';
 import 'package:e_commerce/utils/common/widgets/images/rounded_image.dart';
-import 'package:e_commerce/utils/common/widgets/text/brand_title_text.dart';
 import 'package:e_commerce/utils/common/widgets/text/brand_title_with_verify_icon.dart';
 import 'package:e_commerce/utils/common/widgets/text/product_price_text.dart';
 import 'package:e_commerce/utils/common/widgets/text/product_title_text.dart';
@@ -11,6 +11,7 @@ import 'package:e_commerce/utils/constants/images.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/helpers/app_helpers.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class UProductCardVertical extends StatelessWidget {
@@ -20,7 +21,7 @@ class UProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = AppHelpers.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(ProductDetails()),
       child: Container(
         width: 180,
         padding: EdgeInsets.all(1),
@@ -35,13 +36,13 @@ class UProductCardVertical extends StatelessWidget {
           children: [
             //Thumbnail, favorate button and discount tag
             URoundedContainer(
-              width: 180,
+              height: 180,
               padding: EdgeInsets.all(USizes.sm),
               backgroundColor: isDark ? UColors.dark : UColors.light,
               child: Stack(
                 children: [
                   // Thumbnail
-                  URoundedImage(imageUrl: UImages.product1),
+                  Center(child: URoundedImage(imageUrl: UImages.product1)),
 
                   // discount tag
                   Positioned(

@@ -14,6 +14,7 @@ class UImages{
 
     static const String  facebookLogo = "assets/logo/facebook_logo.png";
     static const String  googleLogo = "assets/logo/google_logo.png";
+    static const String  profile = "assets/logo/profile.png";
 
 
     static const String  accountCreatedImage = "assets/images/account_created.png";
@@ -43,8 +44,12 @@ class UImages{
 
  /// product
   static const String  product1 = "assets/products/product1.png";
+  static const String  product2 = "assets/products/product2.png";
+  static const String  product3 = "assets/products/product3.png";
 
   /// brand
   static const String  brand1 = "assets/brands/bata.png";
+
+
 
 }

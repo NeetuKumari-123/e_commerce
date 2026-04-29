@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 
 class UGridLayout extends StatelessWidget {
   const UGridLayout({
-    super.key, required this.itemCount, this.mainAxisCount=288, required this.itemBuilder,
+    super.key, required this.itemCount, this.mainAxisExtent=288, required this.itemBuilder,
   });
 
   final int itemCount;
-  final double? mainAxisCount;
+  final double? mainAxisExtent;
   final Widget Function(BuildContext context, int index) itemBuilder;
 
   @override
@@ -23,7 +23,7 @@ class UGridLayout extends StatelessWidget {
      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
      
      mainAxisSpacing: USizes.gridViewSpacing,
-    mainAxisExtent: mainAxisCount,
+    mainAxisExtent: mainAxisExtent,
      crossAxisSpacing:  USizes.gridViewSpacing,
      ), itemBuilder:itemBuilder);
   }

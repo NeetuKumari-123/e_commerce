@@ -1,6 +1,8 @@
 
-import 'package:e_commerce/features/store/screens/home/home.dart';
-import 'package:e_commerce/features/store/screens/store/store.dart';
+import 'package:e_commerce/features/personalization/screens/profile/profile.dart';
+import 'package:e_commerce/features/shop/screens/home/home.dart';
+import 'package:e_commerce/features/shop/screens/store/store.dart';
+import 'package:e_commerce/features/shop/screens/wishlist/wishlist.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/helpers/app_helpers.dart';
 import 'package:flutter/material.dart';
@@ -52,8 +54,10 @@ body: Obx(
 
 class NavigationMenuController extends GetxController{
 
+  static NavigationMenuController get instance => Get.find();
+
 RxInt selectedIndex =0.obs;
 
-List<Widget> screens =[HomeScreen(), StoreScreen(),Container(color: Colors.blue,),Container(color: Colors.green,)];
+List<Widget> screens =[HomeScreen(), StoreScreen(),WishlistScreen(),ProfileScreen()];
 
 }
